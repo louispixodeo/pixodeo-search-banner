@@ -1,4 +1,5 @@
 en:
   search_banner:
-    headline: "Welcome to our community"
-    subhead: "We're happy to have you here. If you need help, please search before you post."
+    prehead: "Forums de voyage : les astuces des voyageurs solitaires"
+    headline: "Bienvenue dans la communauté Partir Seul"
+    subhead: "Un voyage en préparation, des bons plans à partager ? N'hésitez pas à rechercher le sujet qui vous intéresse ou à créer une nouvelle discussion."
