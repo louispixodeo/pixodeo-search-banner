@@ -153,6 +153,6 @@ $max-width: 600px;
 @import "special-styles";
 
 .nav-pills li a.active {
-    background: #0e76bc;
-    border-color: #0e76bc;
+    background: #0e76bc !important;
+    border-color: #0e76bc !important;
 }
