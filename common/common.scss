@@ -54,6 +54,7 @@ $max-width: 600px;
     flex: 1 1 auto;
     margin: 0;
     padding: 0;
+    border-radius: var(--mint-border-radius);
 
     .searching {
       // spinner
