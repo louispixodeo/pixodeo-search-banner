@@ -26,7 +26,7 @@ $max-width: 600px;
 .custom-search-banner-wrap {
   box-sizing: border-box;
   position: relative;
-  padding: 2.5em 0 3em;
+  padding: .5em 0 3em;
   margin: 1em auto;
   @include breakpoint(tablet) {
     padding: 1em 8px 1.25em;
