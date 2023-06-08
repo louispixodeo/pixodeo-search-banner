@@ -6,21 +6,7 @@
       <PluginOutlet @name="search-banner-below-headline" />
       <p class="subhead">{{html-safe (theme-i18n "search_banner.subhead")}}</p>
       {{mount-widget widget="search-widget"}}
-      {{#if hasUsers}}
-      <div class="search-banner-buttons">
-        <DButton
-          @action={{route-action "showCreateAccount"}}
-          @label="sign_up"
-          @icon="user"
-          @class="btn-primary"
-        />
-        <DButton
-          @action={{route-action "showLogin"}}
-          @label="log_in"
-          @class="btn-primary"
-        />
-      </div>
-      {{/if}}
+      {{mount-widget widget="section-login-buttons"}}
     </div>
   </div>
 {{/if}}
