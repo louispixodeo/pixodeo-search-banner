@@ -6,6 +6,7 @@
       <PluginOutlet @name="search-banner-below-headline" />
       <p class="subhead">{{html-safe (theme-i18n "search_banner.subhead")}}</p>
       {{mount-widget widget="search-widget"}}
+      {{#unless current_user}}
       <div class="search-banner-buttons">
         <DButton
           @action={{route-action "showCreateAccount"}}
@@ -19,6 +20,7 @@
           @class="btn-primary"
         />
       </div>
+      {{/unless}}
     </div>
   </div>
 {{/if}}
