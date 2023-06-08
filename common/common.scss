@@ -22,7 +22,7 @@ $max-width: 600px;
     background-repeat: no-repeat;
   }
 }
-
+.navigation-categories .search-banner{min-height: 400px}
 .custom-search-banner-wrap {
   box-sizing: border-box;
   position: relative;
@@ -161,4 +161,11 @@ $max-width: 600px;
 .nav-pills li a.active {
     background: #0e76bc !important;
     border-color: #0e76bc !important;
+}
+.search-banner-buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 15px 0;
 }
