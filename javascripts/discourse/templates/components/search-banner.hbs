@@ -7,6 +7,22 @@
       <p class="subhead">{{html-safe (theme-i18n "search_banner.subhead")}}</p>
       {{mount-widget widget="search-widget"}}
       {{mount-widget widget="search-buttons"}}
+      <div class="buttons">
+      <DButton
+        @action={{route-action "showCreateAccount"}}
+        @label="signup_cta.sign_up"
+        @icon="user"
+        @class="btn-primary"
+      />
+      <DButton
+        @action={{action "hideForSession"}}
+        @label="signup_cta.hide_session"
+        @class="no-icon"
+      />
+      <a href {{on "click" this.neverShow}}>{{i18n
+          "signup_cta.hide_forever"
+        }}</a>
+    </div>
     </div>
   </div>
 {{/if}}
