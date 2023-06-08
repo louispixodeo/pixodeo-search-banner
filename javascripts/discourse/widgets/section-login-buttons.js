@@ -9,6 +9,24 @@ export default createWidget("section-login-buttons", {
       return;
     }
 
-    return this.attach("banner-buttons");
+    const buttons = [];
+
+    buttons.push(
+      this.attach("button", {
+        label: "sign_up",
+        className: "btn-primary btn-small sign-up-button",
+        action: "showCreateAccount"
+      })
+    );
+
+    buttons.push(
+      this.attach("button", {
+        label: "log_in",
+        className: "btn-primary btn-small login-button",
+        action: "showLogin",
+        icon: "user"
+      })
+    );
+    return buttons;
   }
 });
