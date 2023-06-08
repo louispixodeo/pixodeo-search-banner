@@ -23,6 +23,9 @@ $max-width: 600px;
   }
 }
 .navigation-categories .search-banner{min-height: 400px}
+.search-banner-buttons .btn-primary {
+	margin: 0 5px;
+}
 .custom-search-banner-wrap {
   box-sizing: border-box;
   position: relative;
