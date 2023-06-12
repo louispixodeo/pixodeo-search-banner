@@ -15,7 +15,8 @@ export default createWidget("section-login-buttons", {
       this.attach("button", {
         label: "sign_up",
         className: "btn-primary btn-small sign-up-button",
-        action: "showCreateAccount"
+        action: "showCreateAccount",
+        sendActionEvent: true
       })
     );
 
@@ -24,7 +25,8 @@ export default createWidget("section-login-buttons", {
         label: "log_in",
         className: "btn-primary btn-small login-button",
         action: "showLogin",
-        icon: "user"
+        icon: "user",
+        sendActionEvent: true
       })
     );
     return buttons;
