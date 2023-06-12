@@ -7,13 +7,13 @@ export default createWidget("banner-buttons", {
   template: hbs`
     <div class="search-banner-buttons">
         <DButton
-          @action={{route-action "showCreateAccount"}}
+          @action={{routeAction "showCreateAccount"}}
           @label="sign_up"
           @icon="user"
           @class="btn-primary"
         />
         <DButton
-          @action={{route-action "showLogin"}}
+          @action={{routeAction "showLogin"}}
           @label="log_in"
           @class="btn-primary"
         />
