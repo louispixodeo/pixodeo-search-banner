@@ -1,28 +1,22 @@
 import { createWidget } from "discourse/widgets/widget";
-import RenderGlimmer from "discourse/widgets/render-glimmer";
-import { hbs } from "ember-cli-htmlbars";
+import hbs from "discourse/widgets/hbs-compiler";
 
 export default createWidget("banner-buttons", {
-  tagName: "div.search-banner-wrap",
-  html() {
-    return [
-      new RenderGlimmer(
-        this,
-        "div",
-        hbs`<div class="search-banner-buttons">
+  tagName: "div.search-banner-buttons",
+
+  template: hbs`
+    <div class="search-banner-buttons">
         <DButton
-          @action={{action "showCreateAccount"}}
+          @action={{'route-action' "showCreateAccount"}}
           @label="sign_up"
           @icon="user"
           @class="btn-primary"
         />
         <DButton
-          @action={{action "showLogin"}}
+          @action={{'route-action' "showLogin"}}
           @label="log_in"
           @class="btn-primary"
         />
-      </div>`
-      ),
-    ];
-  },
+      </div>;
+  `
 });
