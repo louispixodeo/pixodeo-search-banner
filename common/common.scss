@@ -12,8 +12,8 @@ $max-width: 600px;
     padding-top: 0;
   }
 }
-
-.search-banner-pixodeo {
+.mint-component-extensions .search-banner{display: none}
+.search-banner {
   background-image: var(--custom-bg);
 
   @if $tile-background_image == "true" {
@@ -28,7 +28,7 @@ $max-width: 600px;
   display: none
 }*/
 
-.navigation-categories .search-banner-pixodeo {
+.navigation-categories .search-banner {
   min-height: 400px;
   @include breakpoint(tablet) {
     min-height: 400px;
@@ -36,7 +36,6 @@ $max-width: 600px;
     text-align: left;
     background-size: auto;
     height: auto !important;
-    display: block !important;
   }
   @media screen and (max-width: 640px) {
     background-position: 100% 60%;

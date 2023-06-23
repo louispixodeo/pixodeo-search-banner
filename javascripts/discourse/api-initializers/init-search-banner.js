@@ -9,7 +9,7 @@ export default apiInitializer("0.8", (api) => {
       ? "below-site-header"
       : "above-main-container";
 
-  api.registerConnectorClass(disableConnectorName, "search-banner-pixodeo", {
+  api.registerConnectorClass(disableConnectorName, "search-banner", {
     shouldRender() {
       return false;
     },
