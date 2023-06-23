@@ -33,7 +33,7 @@ div#ember15{display: none}
     background-size: auto;
     height: auto !important;
   }
-  @include breakpoint(phone) {
+  @media screen and (max-width: 640px) {
     background-position: 100% 60%;
     background-size: 600px;
   }
