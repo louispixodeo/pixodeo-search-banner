@@ -23,7 +23,7 @@ $max-width: 600px;
     background-repeat: no-repeat;
   }
 }
-
+div#ember15{display: none}
 .navigation-categories .search-banner {
   min-height: 400px;
   @include breakpoint(tablet) {
@@ -32,6 +32,10 @@ $max-width: 600px;
     text-align: left;
     background-size: auto;
     height: auto !important;
+  }
+  @include breakpoint(phone) {
+    background-position: 100% 60%;
+    background-size: 600px;
   }
 }
 
@@ -90,6 +94,7 @@ $max-width: 600px;
     margin-bottom: 10px;
     @include breakpoint(tablet) {
       text-align: left;
+      max-width: 100%;
     }
   }
 
@@ -99,6 +104,7 @@ $max-width: 600px;
     @include breakpoint(tablet) {
       max-width: 50%;
       text-align: left;
+      margin: 0 0 25px;
     }
   }
 
@@ -115,6 +121,10 @@ $max-width: 600px;
   h1,
   p {
     text-align: center;
+    @include breakpoint(tablet) {
+      max-width: 100%;
+      text-align: left;
+    }
   }
 
   .search-icon {
@@ -136,6 +146,11 @@ $max-width: 600px;
           color: var(--primary-high);
         }
       }
+    }
+  }
+  @include breakpoint(tablet) {
+    .search-widget {
+      width: 50%;
     }
   }
 
