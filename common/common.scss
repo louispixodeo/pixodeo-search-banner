@@ -36,6 +36,7 @@ $max-width: 600px;
     text-align: left;
     background-size: auto;
     height: auto !important;
+    display: block !important;
   }
   @media screen and (max-width: 640px) {
     background-position: 100% 60%;
