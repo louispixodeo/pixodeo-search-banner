@@ -164,6 +164,11 @@ div#ember15 {
       width: 50%;
     }
   }
+  @media screen and (max-width: 640px) {
+    .search-widget {
+      width: 100%;
+    }
+  }
 
   .search-input .btn.search-context {
     margin: 0;
