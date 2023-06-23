@@ -6,20 +6,20 @@
       <PluginOutlet @name="search-banner-below-headline" />
       <p class="subhead">{{html-safe (theme-i18n "search_banner.subhead")}}</p>
       {{#unless this.currentUser }}
-      <div class="search-banner-buttons">
-        <DButton
-          @action={{route-action "showCreateAccount"}}
-          @label="sign_up"
-          @class="btn-primary"
-        />
-        <DButton
-          @action={{route-action "showLogin"}}
-          @label="log_in"
-          @icon="user"
-          @class="btn-primary"
-        />
-      </div>
-        {{/unless}}
+        <div class="search-banner-buttons">
+          <DButton
+            @action={{route-action "showCreateAccount"}}
+            @label="sign_up"
+            @class="btn-primary"
+          />
+          <DButton
+            @action={{route-action "showLogin"}}
+            @label="log_in"
+            @icon="user"
+            @class="btn-primary"
+          />
+        </div>
+      {{/unless}}
       {{mount-widget widget="search-widget"}}
     </div>
   </div>
