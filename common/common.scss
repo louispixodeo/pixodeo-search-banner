@@ -13,7 +13,7 @@ $max-width: 600px;
   }
 }
 
-.search-banner {
+.search-banner-pixodeo {
   background-image: var(--custom-bg);
 
   @if $tile-background_image == "true" {
@@ -28,7 +28,7 @@ $max-width: 600px;
   display: none
 }*/
 
-.navigation-categories .search-banner {
+.navigation-categories .search-banner-pixodeo {
   min-height: 400px;
   @include breakpoint(tablet) {
     min-height: 400px;
