@@ -23,7 +23,11 @@ $max-width: 600px;
     background-repeat: no-repeat;
   }
 }
-div#ember15{display: none}
+
+div#ember15 {
+  display: none
+}
+
 .navigation-categories .search-banner {
   min-height: 400px;
   @include breakpoint(tablet) {
@@ -56,6 +60,9 @@ div#ember15{display: none}
   > div {
     margin: 0 auto;
     max-width: $max-width;
+    @include breakpoint(tablet) {
+      justify-content: flex-start;
+    }
   }
 
   .search-menu {
@@ -71,6 +78,9 @@ div#ember15{display: none}
       margin: 0;
       width: 100%;
       padding-right: 4em;
+      @include breakpoint(tablet) {
+        padding-right: 0 !important;
+      }
     }
   }
 
@@ -148,6 +158,7 @@ div#ember15{display: none}
       }
     }
   }
+
   @include breakpoint(tablet) {
     .search-widget {
       width: 50%;
