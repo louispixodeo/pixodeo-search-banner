@@ -226,7 +226,7 @@ $max-width: 600px;
   flex-wrap: wrap;
   margin: 15px auto !important;
 }
-.list-controls {
+.list-controls, .admin-main-nav {
     position: sticky;
     top: 75px;
     z-index: 1000;
