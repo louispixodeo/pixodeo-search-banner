@@ -241,9 +241,9 @@ $max-width: 600px;
 .admin-main-nav .nav.nav-pills {
     margin-bottom: 0;
 }
-#create-topic {
+.list-controls #create-topic {
     display: none;
 }
-.navigation-topics #create-topic {
+.navigation-topics .list-controls #create-topic {
     display: inline-flex;
 }
