@@ -18,11 +18,9 @@
             @icon="user"
             @class="btn-primary"
           />
-          <Link @route="latest">
             <button {{on "click" this.onClick}} class="btn-primary">
               {{@label}}
             </button>
-          </Link>
         </div>
       {{/unless}}
       {{mount-widget widget="search-widget"}}
