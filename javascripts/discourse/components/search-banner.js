@@ -59,9 +59,5 @@ export default Component.extend({
 
   didDestroyElement() {
     document.documentElement.classList.remove("display-search-banner");
-  },
-  onClick() {
-    // Handle the transition using the Link component
-    this.router.transitionTo("latest");
   }
 });
