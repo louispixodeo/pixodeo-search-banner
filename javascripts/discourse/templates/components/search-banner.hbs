@@ -18,6 +18,11 @@
             @icon="user"
             @class="btn-primary"
           />
+          <DButton
+            @action={{action this.goToCategory}}
+            @label="category"
+            @class="btn-primary"
+          />
         </div>
       {{/unless}}
       {{mount-widget widget="search-widget"}}

@@ -59,5 +59,10 @@ export default Component.extend({
 
   didDestroyElement() {
     document.documentElement.classList.remove("display-search-banner");
+  },
+
+  @action
+  goToCategory(){
+    window.location.href = '/lastest';
   }
 });
