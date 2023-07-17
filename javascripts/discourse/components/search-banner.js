@@ -64,6 +64,6 @@ export default Component.extend({
 
   @action
   goToCategory(){
-    window.location.href = '/lastest';
+    window.location.href = 'https://forum.partirseul.com/latest?order=created';
   }
 });
