@@ -27,7 +27,7 @@
 .category-heading {
   max-width: 100%;
   display: flex;
-  font-size: small;
+  font-size: x-small;
   align-items: center;
 
   .category-logo {
@@ -38,7 +38,30 @@
     margin-bottom: 0
   }
 }
-.list-controls .tag-drop-header,
-.list-controls .category-drop-header {
+
+.category {
+  #navigation-bar {
+    font-size: x-small;
+  }
+
+  .list-controls .tag-drop-header,
+  .list-controls .category-drop-header {
     padding: 0;
+  }
+
+  .category-navigation {
+    .single-select-header {
+      font-size: x-small !important;
+      padding: 5px !important;
+    }
+
+    .category-breadcrumb {
+      margin-bottom: 5px;
+    }
+  }
+
+  .toggle-link {
+    padding: 0 5px !important;
+    min-height: 20px !important;
+  }
 }
