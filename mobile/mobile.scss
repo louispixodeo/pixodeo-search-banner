@@ -49,6 +49,10 @@
     padding: 0;
   }
 
+  #main-outlet {
+    padding-top: 0
+  }
+
   .category-navigation {
     .single-select-header {
       font-size: x-small !important;
@@ -58,7 +62,8 @@
     .category-breadcrumb {
       margin-bottom: 5px;
     }
-    .btn{
+
+    .btn {
       font-size: x-small;
     }
   }
