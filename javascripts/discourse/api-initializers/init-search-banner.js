@@ -16,8 +16,8 @@ export default apiInitializer("0.8", (api) => {
   });
 
   // Simplified version of header search theme component
-  const searchMenuWidget = api.container.factoryFor("widget:search-menu");
-  const corePanelContents = searchMenuWidget.class.prototype["panelContents"];
+  /*const searchMenuWidget = api.container.factoryFor("widget:search-menu");
+  const corePanelContents = searchMenuWidget.class.prototype["panelContents"];*/
 
   api.reopenWidget("search-menu", {
     buildKey(attrs) {
@@ -121,7 +121,7 @@ export default apiInitializer("0.8", (api) => {
         );
       }
 
-      contents = contents.concat(...corePanelContents.call(this));
+      /*contents = contents.concat(...corePanelContents.call(this));
       if (formFactor === "menu" || showHeaderResults) {
         return contents;
       } else {
@@ -131,7 +131,7 @@ export default apiInitializer("0.8", (api) => {
             widget.name !== "search-context"
           );
         });
-      }
+      }*/
     },
   });
 
