@@ -1,17 +1,18 @@
-import Component from "@ember/component";
+import Component from "@glimmer/component";
+import { action } from "@ember/object";
 import { inject as service } from "@ember/service";
 import { defaultHomepage } from "discourse/lib/utilities";
-import { and } from "@ember/object/computed";
-import { action } from "@ember/object";
-import discourseComputed, { observes } from "discourse-common/utils/decorators";
+import I18n from "discourse-i18n";
 
-export default Component.extend({
-  router: service(),
-  tagName: "",
+export default class SearchBanner extends Component {
+  @service router;
+  @service siteSettings;
+  @service currentUser;
 
-  @discourseComputed("router.currentRouteName")
-  displayForRoute(currentRouteName) {
+  get displayForRoute() {
     const showOn = settings.show_on;
+    const currentRouteName = this.router.currentRouteName;
+
     if (showOn === "homepage") {
       return currentRouteName === `discovery.${defaultHomepage()}`;
     } else if (showOn === "top_menu") {
@@ -27,43 +28,40 @@ export default Component.extend({
         !currentRouteName.startsWith("admin.")
       );
     }
-  },
+  }
 
-  @discourseComputed("currentUser")
-  displayForUser(currentUser) {
+  get displayForUser() {
     const showFor = settings.show_for;
-    if (showFor === "everyone") {
-      return true;
-    } else if (showFor === "logged_out" && !currentUser) {
-      return true;
-    } else if (showFor === "logged_in" && currentUser) {
-      return true;
-    }
-    return false;
-  },
-
-  shouldDisplay: and("displayForUser", "displayForRoute"),
-
-  // Setting a class on <html> from a component is not great
-  // but we need it for backwards compatibility
-  @observes("shouldDisplay")
-  displayChanged() {
-    document.documentElement.classList.toggle(
-      "display-search-banner",
-      this.shouldDisplay
+    return (
+      showFor === "everyone" ||
+      (showFor === "logged_out" && !this.currentUser) ||
+      (showFor === "logged_in" && this.currentUser)
     );
-  },
+  }
 
-  didInsertElement() {
-    this.displayChanged();
-  },
+  get buttonText() {
+    return I18n.t(themePrefix("search_banner.search_button_text"));
+  }
 
-  didDestroyElement() {
+  get shouldDisplay() {
+    return this.displayForRoute && this.displayForUser;
+  }
+
+  @action
+  didInsert() {
+    // Setting a class on <html> from a component is not great
+    // but we need it for backwards compatibility
+    document.documentElement.classList.add("display-search-banner");
+  }
+
+  @action
+  willDestroy() {
+    super.willDestroy(...arguments);
     document.documentElement.classList.remove("display-search-banner");
-  },
+  }
 
   @action
   goToCategory(){
     window.location.href = 'https://forum.partirseul.com/latest?order=created';
   }
-});
+}

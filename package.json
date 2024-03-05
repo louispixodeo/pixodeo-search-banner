@@ -1,10 +1,13 @@
 {
-  "name": "pixodeo-search-banner",
+  "name": "discourse-search-banner",
   "version": "1.0.0",
-  "repository": "https://github.com/louispixodeo/pixodeo-search-banner",
-  "author": "Discourse-Pixodeo",
+  "repository": "https://github.com/discourse/discourse-search-banner",
+  "author": "Discourse",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
-    "eslint-config-discourse": "^3.1.0"
+    "@discourse/lint-configs": "^1.2.0",
+    "ember-template-lint": "^5.13.0",
+    "eslint": "^8.54.0",
+    "prettier": "^2.8.8"
   }
 }
