@@ -24,6 +24,34 @@ $max-width: 600px;
   display: none;
 }
 
+.navigation-categories .search-banner {
+  min-height: 400px;
+  @include breakpoint(tablet) {
+    background-position: center right;
+    text-align: left;
+    background-size: auto;
+    height: auto !important;
+  }
+  @media screen and (max-width: 640px) {
+    background-position: 100% 60%;
+    background-size: 600px;
+  }
+  @media screen and (width: 460px) {
+    background-position: 100% 60%;
+    background-size: 650px;
+  }
+  @media screen and (max-width: 320px) {
+    background-size: 450px;
+  }
+}
+
+.search-banner-buttons .btn-primary {
+  margin: 0 5px;
+  @media screen and (max-width: 360px) {
+    margin-bottom: 10px;
+  }
+}
+
 .custom-search-banner-wrap {
   box-sizing: border-box;
   position: relative;
