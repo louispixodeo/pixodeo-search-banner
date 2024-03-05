@@ -9,9 +9,9 @@
     >
       <div class="wrap custom-search-banner-wrap">
         <div class="prehead">{{html-safe (theme-i18n "search_banner.prehead")}}</div>
-        <h1>{{html-safe (theme-i18n "search_banner.headline")}}</h1>
+        <h1 class="headline">{{html-safe (theme-i18n "search_banner.headline")}}</h1>
         <PluginOutlet @name="search-banner-below-headline" />
-        <p>{{html-safe (theme-i18n "search_banner.subhead")}}</p>
+        <p class="subhead">{{html-safe (theme-i18n "search_banner.subhead")}}</p>
         <div class="search-menu search-banner-buttons">
           {{#unless this.currentUser }}
             <DButton

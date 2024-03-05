@@ -40,7 +40,22 @@ $max-width: 600px;
   }
 
   .search-menu {
+    position: relative;
     display: flex;
+    flex-wrap: wrap;
+
+    .browser-search-tip {
+      display: none;
+    }
+
+    input[type="text"] {
+      margin: 0;
+      width: 100%;
+      padding-right: 4em;
+      @include breakpoint(tablet) {
+        padding-right: 0 !important;
+      }
+    }
 
     .search-menu-container {
       width: 100%;
@@ -95,16 +110,22 @@ $max-width: 600px;
   }
 
   h1 {
-    font-size: var(--font-up-6);
+    font-size: 20px;
     line-height: $line-height-medium;
+    margin-bottom: 20px;
     @include breakpoint(tablet) {
       font-size: var(--font-up-4);
+      text-align: left;
     }
   }
 
   h1,
   p {
     text-align: center;
+    @include breakpoint(tablet) {
+      max-width: 100%;
+      text-align: left;
+    }
   }
 
   .btn.search-icon:not(.has-search-button-text) {
@@ -171,6 +192,7 @@ $max-width: 600px;
     }
   }
 
+
   .searching a.show-advanced-search {
     display: none;
   }
@@ -181,6 +203,18 @@ $max-width: 600px;
 
   span.keyword {
     color: var(--primary);
+  }
+
+  @include breakpoint(tablet) {
+    .search-widget {
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .search-widget {
+      width: 100%;
+    }
   }
 }
 
