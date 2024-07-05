@@ -1,0 +1,199 @@
+.continent-menu {
+    margin: 10px 0px 20px 0px;
+    text-align: center;
+    overflow-x: auto;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    padding: 15px 0;
+
+
+    ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+
+        li {
+            padding: 0 5px;
+
+            &:first-child {
+                padding-left: 0
+            }
+
+            &:last-child {
+                padding-right: 0
+            }
+
+            a {
+                background: #f8f8f8;
+                display: block;
+                border-radius: 20px;
+                padding: 15px;
+                transition: all 0.2s linear 0s;
+
+                &:hover {
+                    background: #fd9d2a;
+
+                    img {
+                        filter: brightness(255);
+                    }
+
+                    .continent-name {
+                        color: #fff;
+                    }
+                }
+            }
+
+            img {
+                height: 75px;
+                width: auto;
+                max-width: 75px;
+                display: inline-block;
+                object-fit: scale-down;
+            }
+
+            .continent-name {
+                display: block;
+                color: #fd9d2a;
+                margin-top: 5px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.categories-list .categories-and-latest {
+    padding-top: 160px;
+}
+
+#menu-main {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+    > li {
+        > a {
+            margin-left: 30px;
+            font-size: 17px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color: #222;
+            text-decoration: none;
+            padding-bottom: 19px;
+            border-bottom: 1px solid #ffffff;
+            cursor: pointer;
+            transition: all 0.1s ease-in-out 0s;
+            @media screen and (max-width: 1200px) {
+                margin-left: 10px;
+                font-size: 15px;
+            }
+        }
+
+        &:hover > a {
+            color: #fd9d2a;
+            border-color: #8bca02;
+
+        }
+    }
+
+    > li:first-child a {
+        margin-left: 0px;
+    }
+
+
+    .sub-menu {
+        list-style: none;
+        position: absolute;
+        left: 40px;
+        padding: 0;
+        margin: 0;
+        width: max-content;
+        border-radius: 5px;
+        box-shadow: 3px 3px 15px 0 rgb(0 0 0 / 15%);
+        background-color: #fff;
+        top: 35px;
+        z-index: 1;
+        min-width: 187px;
+        display: none;
+
+        li:first-child a {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        a {
+            font-size: 18px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color: #222;
+            text-decoration: none;
+            border-bottom: 1px solid rgb(0 0 0 / 15%);
+            padding: 15px;
+            display: block;
+            transition: all 0.1s ease-in-out 0s;
+
+            &:hover {
+                background-color: #8bca02;
+                color: #ffffff;
+                border-color: #ffffff;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+
+            .sub-menu-toggle, .sub-menu {
+                display: none;
+            }
+        }
+    }
+
+    .menu-item-has-children {
+        position: relative;
+
+        > a {
+            border-color: transparent !important;
+        }
+    }
+
+    .menu-item-has-children:hover > .sub-menu {
+        display: block;
+    }
+
+
+    .screen-reader-text {
+        display: none
+    }
+}
+
+.p-navigation {
+    margin-right: 5px;
+}
+
+.d-header #site-logo {
+    height: 3.5rem;
+}
+.custom-search-banner .custom-search-banner-wrap {
+    background: transparent;
+}
+.custom-search-banner-wrap h1, .custom-search-banner-wrap p {
+    color: var(--primary) !important;
+}
+
+.search-menu .search-input {
+    border: 1px solid var(--primary-medium) !important;
+    border-radius: 2px;
+}

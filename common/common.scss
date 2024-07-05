@@ -248,6 +248,7 @@ $max-width: 600px;
 
 // these are add-on styles controlled by settings
 @import "special-styles";
+@import "custom-category";
 
 .nav-pills li a.active {
   background: #0e76bc !important;
