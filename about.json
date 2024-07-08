@@ -1,8 +1,8 @@
 {
-  "name": "discourse-search-banner",
+  "name": "pixodeo-banner",
   "component": true,
-  "about_url": "https://meta.discourse.org/t/search-banner-theme-component/122939",
-  "license_url": "https://github.com/awesomerobot/discourse-search-banner/blob/master/LICENSE",
+  "about_url": "pixodeo.com",
+  "license_url": "pixodeo.com",
   "assets": {},
   "color_schemes": {}
 }
