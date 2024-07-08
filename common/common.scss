@@ -3,255 +3,269 @@
 $max-width: 600px;
 
 .display-search-banner {
-  #main-outlet {
-    padding-top: 0;
-  }
+    #main-outlet {
+        padding-top: 0;
+    }
 }
+
 .d-header .header-buttons {
     display: none;
 }
+
 .before-header-panel-outlet {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     width: 100%;
 }
-.search-banner {
-  background-image: var(--custom-bg);
 
-  @if $tile-background_image == "true" {
-    background-size: auto;
-  } @else {
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+.search-banner {
+    background-image: var(--custom-bg);
+
+    @if $tile-background_image == "true" {
+        background-size: auto;
+    } @else {
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }
 
 // hide search icon from default search menu
 .search-menu.glimmer-search-menu .search-icon {
-  display: none;
+    display: none;
 }
 
 .navigation-categories .search-banner {
-  min-height: 400px;
-  @include breakpoint(tablet) {
-    background-position: center right;
-    text-align: left;
-    background-size: auto;
-    height: auto !important;
-  }
-  @media screen and (max-width: 640px) {
-    background-position: 100% 60%;
-    background-size: 600px;
-  }
-  @media screen and (width: 460px) {
-    background-position: 100% 60%;
-    background-size: 650px;
-  }
-  @media screen and (max-width: 320px) {
-    background-size: 450px;
-  }
+    min-height: 400px;
+    padding-top: .5em !important;
+    @include breakpoint(tablet) {
+        background-position: center right;
+        text-align: left;
+        background-size: auto;
+        height: auto !important;
+    }
+    @media screen and (max-width: 640px) {
+        background-position: 100% 60%;
+        background-size: 600px;
+    }
+    @media screen and (width: 460px) {
+        background-position: 100% 60%;
+        background-size: 650px;
+    }
+    @media screen and (max-width: 320px) {
+        background-size: 450px;
+    }
 }
 
 .search-banner-buttons .btn-primary {
-  margin: 0 5px;
-  @media screen and (max-width: 360px) {
-    margin-bottom: 10px;
-  }
+    margin: 0 5px;
+    @media screen and (max-width: 360px) {
+        margin-bottom: 10px;
+    }
 }
 
 .custom-search-banner-wrap {
-  box-sizing: border-box;
-  position: relative;
-  /*padding: 2.5em 0 3em;*/
-  margin: 1em auto;
-  @include breakpoint(tablet) {
-    padding: 1em 8px 1.25em;
-    margin-top: 0.5em;
-  }
-
-  > div {
-    margin: 0 auto;
-    max-width: $max-width;
-  }
-
-  .search-menu {
+    box-sizing: border-box;
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
+    /*padding: 2.5em 0 3em;*/
+    margin: 1em auto;
+    @include breakpoint(tablet) {
+        padding: 1em 8px 1.25em;
+        margin-top: 0.5em;
+    }
+
+    > div {
+        margin: 0 auto;
+        max-width: $max-width;
+    }
+
+    .search-menu {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+
+        .browser-search-tip {
+            display: none;
+        }
+
+        input[type="text"] {
+            margin: 0;
+            width: 100%;
+            padding-right: 4em;
+            @include breakpoint(tablet) {
+                padding-right: 0 !important;
+            }
+        }
+
+        .search-menu-container {
+            width: 100%;
+        }
+    }
+
+    .menu-panel-results .menu-panel {
+        position: unset;
+        padding: 0;
+    }
+
+    .d-icon-search {
+        margin: 0;
+    }
 
     .browser-search-tip {
-      display: none;
+        display: none;
     }
 
-    input[type="text"] {
-      margin: 0;
-      width: 100%;
-      padding-right: 4em;
-      @include breakpoint(tablet) {
-        padding-right: 0 !important;
-      }
+    .search-input input#search-term[type="text"] {
+        margin: 0;
+        width: 100%;
     }
 
-    .search-menu-container {
-      width: 100%;
-    }
-  }
+    .search-input {
+        flex: 1 1 auto;
+        margin: 0;
 
-  .menu-panel-results .menu-panel {
-    position: unset;
-    padding: 0;
-  }
-
-  .d-icon-search {
-    margin: 0;
-  }
-  .browser-search-tip {
-    display: none;
-  }
-  .search-input input#search-term[type="text"] {
-    margin: 0;
-    width: 100%;
-  }
-
-  .search-input {
-    flex: 1 1 auto;
-    margin: 0;
-    .searching {
-      // spinner
-      top: 0.4em;
-      right: 2.25em;
-    }
-  }
-
-  .prehead {
-    font-size: var(--font-up-6);
-    text-align: center;
-    color: var(--quaternary);
-    margin-bottom: 10px;
-    @include breakpoint(tablet) {
-      text-align: left;
-      max-width: 100%;
-    }
-  }
-
-  .subhead {
-    max-width: 400px;
-    margin: 0 auto 25px;
-    @include breakpoint(tablet) {
-      max-width: 50%;
-      text-align: left;
-      margin: 0 0 25px;
-    }
-  }
-
-  h1 {
-    font-size: 20px;
-    line-height: $line-height-medium;
-    margin-bottom: 20px;
-    @include breakpoint(tablet) {
-      font-size: var(--font-up-4);
-      text-align: left;
-    }
-  }
-
-  h1,
-  p {
-    text-align: center;
-    @include breakpoint(tablet) {
-      max-width: 100%;
-      text-align: left;
-    }
-  }
-
-  .btn.search-icon:not(.has-search-button-text) {
-    z-index: 2;
-    background: transparent;
-    line-height: 1;
-    color: var(--primary-medium);
-    height: 100%;
-    padding-right: 0.25em;
-    .discourse-no-touch & {
-      &:hover {
-        background: transparent;
-        color: var(--primary);
-        .d-icon {
-          color: currentColor;
+        .searching {
+            // spinner
+            top: 0.4em;
+            right: 2.25em;
         }
-      }
     }
-  }
-  .btn.search-icon.has-search-button-text {
-    order: 2;
-    margin-left: 0.5em;
-    column-gap: 0.5em;
-    background-color: var(--tertiary);
-    color: var(--secondary);
-    flex: none;
-    &:hover {
-      background-color: var(--tertiary-hover);
+
+    .prehead {
+        font-size: var(--font-up-6);
+        text-align: center;
+        color: var(--quaternary);
+        margin-bottom: 10px;
+        @include breakpoint(tablet) {
+            text-align: left;
+            max-width: 100%;
+        }
     }
-    .d-icon {
-      color: var(--secondary);
+
+    .subhead {
+        max-width: 400px;
+        margin: 0 auto 25px;
+        @include breakpoint(tablet) {
+            max-width: 50%;
+            text-align: left;
+            margin: 0 0 25px;
+        }
     }
-  }
 
-  // hide the search icon when a search context is selected
-  // eg when searching in a topic
-  .search-input .search-context + .search-icon:not(.has-search-button-text),
-  .search-input .search-context ~ .search-icon:not(.has-search-button-text) {
-    display: none;
-  }
-
-  .results {
-    box-sizing: border-box;
-    background: var(--secondary);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-    position: absolute;
-    z-index: 9;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    top: 2.75em;
-    right: 0;
-    padding: 0.5em;
-    @include breakpoint(mobile-extra-large) {
-      width: 100%;
+    h1 {
+        font-size: 20px;
+        line-height: $line-height-medium;
+        margin-bottom: 20px;
+        @include breakpoint(tablet) {
+            font-size: var(--font-up-4);
+            text-align: left;
+        }
     }
-    ul,
-    ol {
-      list-style-type: none;
-      margin: 0;
+
+    h1,
+    p {
+        text-align: center;
+        @include breakpoint(tablet) {
+            max-width: 100%;
+            text-align: left;
+        }
     }
-    .d-icon-search {
-      display: none;
+
+    .btn.search-icon:not(.has-search-button-text) {
+        z-index: 2;
+        background: transparent;
+        line-height: 1;
+        color: var(--primary-medium);
+        height: 100%;
+        padding-right: 0.25em;
+
+        .discourse-no-touch & {
+            &:hover {
+                background: transparent;
+                color: var(--primary);
+
+                .d-icon {
+                    color: currentColor;
+                }
+            }
+        }
     }
-  }
 
+    .btn.search-icon.has-search-button-text {
+        order: 2;
+        margin-left: 0.5em;
+        column-gap: 0.5em;
+        background-color: var(--tertiary);
+        color: var(--secondary);
+        flex: none;
 
-  .searching a.show-advanced-search {
-    display: none;
-  }
+        &:hover {
+            background-color: var(--tertiary-hover);
+        }
 
-  .search-link .d-icon {
-    color: var(--primary-medium);
-  }
-
-  span.keyword {
-    color: var(--primary);
-  }
-
-  @include breakpoint(tablet) {
-    .search-widget {
-      width: 50%;
+        .d-icon {
+            color: var(--secondary);
+        }
     }
-  }
 
-  @media screen and (max-width: 640px) {
-    .search-widget {
-      width: 100%;
+    // hide the search icon when a search context is selected
+    // eg when searching in a topic
+    .search-input .search-context + .search-icon:not(.has-search-button-text),
+    .search-input .search-context ~ .search-icon:not(.has-search-button-text) {
+        display: none;
     }
-  }
+
+    .results {
+        box-sizing: border-box;
+        background: var(--secondary);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        position: absolute;
+        z-index: 9;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        top: 2.75em;
+        right: 0;
+        padding: 0.5em;
+        @include breakpoint(mobile-extra-large) {
+            width: 100%;
+        }
+
+        ul,
+        ol {
+            list-style-type: none;
+            margin: 0;
+        }
+
+        .d-icon-search {
+            display: none;
+        }
+    }
+
+
+    .searching a.show-advanced-search {
+        display: none;
+    }
+
+    .search-link .d-icon {
+        color: var(--primary-medium);
+    }
+
+    span.keyword {
+        color: var(--primary);
+    }
+
+    @include breakpoint(tablet) {
+        .search-widget {
+            width: 50%;
+        }
+    }
+
+    @media screen and (max-width: 640px) {
+        .search-widget {
+            width: 100%;
+        }
+    }
 }
 
 // these are add-on styles controlled by settings
@@ -259,36 +273,36 @@ $max-width: 600px;
 @import "custom-category";
 
 .nav-pills li a.active {
-  background: #0e76bc !important;
-  border-color: #0e76bc !important;
+    background: #0e76bc !important;
+    border-color: #0e76bc !important;
 }
 
 .search-banner-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 15px auto !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 15px auto !important;
 }
 
 .list-controls, .admin-main-nav {
-  position: sticky;
-  top: 75px;
-  z-index: 100;
-  background: #fff;
-  padding: 10px 10px 0;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
-  border-radius: 2px;
+    position: sticky;
+    top: 75px;
+    z-index: 100;
+    background: #fff;
+    padding: 10px 10px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+    border-radius: 2px;
 }
 
 .admin-main-nav {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .admin-main-nav .nav.nav-pills {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .categories-list .list-controls #create-topic {
-  display: none !important;
+    display: none !important;
 }
