@@ -19,43 +19,17 @@ export default {
   initialize() {
     withPluginApi("0.8.41", (api) => {
       try {
-        const splitLinks = settings.Header_links.split("|").filter(Boolean);
-
-        splitLinks.forEach((link, index, links) => {
-          const fragments = link.split(",").map((fragment) => fragment.trim());
-          const title = fragments[0];
-          const iconTemplate = buildIcon(fragments[1], title);
-          const href = fragments[2];
-          const className = `header-icon-${dasherize(fragments[0])}`;
-          const viewClass = fragments[3].toLowerCase();
-          const target = fragments[4].toLowerCase() === "blank" ? "_blank" : "";
-          const rel = target ? "noopener" : "";
-          const isLastLink =
-            link === links[links.length - 1] ? "last-custom-icon" : "";
-
-          const iconComponent = <template>
-            <li
-              class="custom-header-icon-link
-                {{className}}
-                {{viewClass}}
-                {{isLastLink}}"
+        const iconComponent = <template>
+            <div
+              class="custom-header-icon-link"
             >
-              <a
-                class="btn no-text icon btn-flat"
-                href={{href}}
-                title={{title}}
-                target={{target}}
-                rel={{rel}}
-              >
-                {{iconTemplate}}
-              </a>
-            </li>
+              TEST
+            </div>
           </template>;
 
           const beforeIcon = ["chat", "search", "hamburger", "user-menu"];
 
-          api.headerIcons.add(title, iconComponent, { before: beforeIcon });
-        });
+          api.headerIcons.add("OK", iconComponent, { before: beforeIcon });
       } catch (error) {
         // eslint-disable-next-line no-console
         console.error(
