@@ -4,7 +4,7 @@ export default {
     name: "custom-header-nav",
     initialize(container) {
         withPluginApi("1.34.0", (api) => {
-            api.renderInOutlet("before-header-pane", <template>
+            api.renderInOutlet("before-header-panel", <template>
                 'TESTING'
             </template>);
         });
