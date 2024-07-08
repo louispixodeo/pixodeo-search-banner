@@ -4,6 +4,7 @@ export default {
     name: "custom-header-nav",
     initialize(container) {
         withPluginApi("1.34.0", (api) => {
+            api.registerHomeLogoHrefCallback(() => "https://www.partirseul.com/");
             api.renderInOutlet("before-header-panel", <template>
                 <div class="menu-main">
   <ul id="menu-main" class="menu-wrapper">
