@@ -80,7 +80,7 @@
     > li {
         > a {
             margin-left: 30px;
-            font-size: 17px;
+            font-size: 16px;
             font-weight: 600;
             font-stretch: normal;
             font-style: normal;
@@ -186,9 +186,11 @@
 .d-header #site-logo {
     height: 3.5rem;
 }
+
 .custom-search-banner .custom-search-banner-wrap {
     background: transparent;
 }
+
 .custom-search-banner-wrap h1, .custom-search-banner-wrap p {
     color: var(--primary) !important;
 }
@@ -196,4 +198,19 @@
 .search-menu .search-input {
     border: 1px solid var(--primary-medium) !important;
     border-radius: 2px;
+}
+
+.docked #menu-main {
+    > li > a {
+        margin-left: 15px;
+        font-size: 14px;
+    }
+
+    #menu-main .sub-menu a {
+        font-size: 14px;
+    }
+}
+
+.d-header .home-logo-wrapper-outlet {
+    min-width: 200px;
 }
