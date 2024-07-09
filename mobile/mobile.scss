@@ -1,35 +1,41 @@
 .search-menu {
-  .search-link {
-    .badge-category {
-      display: inline-block;
+    .search-link {
+        .badge-category {
+            display: inline-block;
+        }
     }
-  }
 }
 
 .search-menu .search-input input#search-term {
-  width: 100%;
+    width: 100%;
 }
 
 .custom-search-banner-wrap .search-icon {
-  top: 0.15em;
+    top: 0.15em;
 }
-.continent-menu {
-  position: initial;
-  ul {
-    justify-content: flex-start;
-    li a {
-      margin-bottom: 10px;
-    }
-    .continent-name {
-      margin-top: 0 !important;
-      font-weight: 500 !important;
-    }
 
-  }
+.continent-menu {
+    position: initial;
+
+    ul {
+        justify-content: flex-start;
+
+        li a {
+            margin-bottom: 10px;
+        }
+
+        .continent-name {
+            margin-top: 0 !important;
+            font-weight: 500 !important;
+        }
+
+    }
 }
+
 .categories-list .container.list-container {
-  padding-top: inherit;
+    padding-top: inherit;
 }
-.p-navigation {
-  display: none;
+
+.p-navigation,.menu-main  {
+    display: none;
 }
