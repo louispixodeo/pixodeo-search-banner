@@ -200,7 +200,7 @@
     border-radius: 2px;
 }
 
-.docked #menu-main {
+body:not(.has-sidebar-page) #menu-main {
     > li > a {
         margin-left: 15px;
         font-size: 14px;
