@@ -14,137 +14,44 @@ export default apiInitializer("1.14.0", (api) => {
     api.addSidebarSection((BaseCustomSidebarSection, BaseCustomSidebarSectionLink) => {
         return class extends BaseCustomSidebarSection {
             get name() {
-                return "chat-channels";
+                return "wp-menu";
             }
 
             get route() {
-                return "chat";
+                return "#";
             }
 
             get title() {
-                return I18n.t("sidebar.sections.chat.title");
+                return 'Main Navigation';
             }
 
             get text() {
-                return I18n.t("sidebar.sections.chat.text");
+                return 'Main Navigation Text';
             }
 
             get actionsIcon() {
-                return "cog";
-            }
-
-            get actions() {
-                return [
-                    {
-                        id: "browseChannels", title: "Browse channel", action: () => {
-                        }
-                    },
-                    {
-                        id: "settings", title: "Settings", action: () => {
-                        }
-                    },
-                ];
+                return "";
             }
 
             get links() {
                 return [
                     new (class extends BaseCustomSidebarSectionLink {
                         get name() {
-                            "dev"
+                            "nos-services"
                         }
 
                         get route() {
-                            return "chat.channel";
-                        }
-
-                        get model() {
-                            return {
-                                channelId: "1",
-                                channelTitle: "dev channel"
-                            };
+                            return "https://www.partirseul.com/destination-voyage-seul/";
                         }
 
                         get title() {
-                            return "dev channel";
+                            return "Nos Services - Pays";
                         }
 
                         get text() {
-                            return "dev channel";
-                        }
-
-                        get prefixType() {
-                            return "icon";
-                        }
-
-                        get prefixValue() {
-                            return "hashtag";
-                        }
-
-                        get prefixColor() {
-                            return "000000";
-                        }
-
-                        get prefixBadge() {
-                            return "lock";
-                        }
-
-                        get suffixType() {
-                            return "icon";
-                        }
-
-                        get suffixValue() {
-                            return "circle";
-                        }
-
-                        get suffixCSSClass() {
-                            return "unread";
+                            return "Nos Services - Pays Text";
                         }
                     })(),
-                    new (class extends BaseCustomSidebarSectionLink {
-                        get name() {
-                            "random"
-                        }
-
-                        get route() {
-                            return "chat.channel";
-                        }
-
-                        get model() {
-                            return {
-                                channelId: "2",
-                                channelTitle: "random channel"
-                            };
-                        }
-
-                        get currentWhen() {
-                            return true;
-                        }
-
-                        get title() {
-                            return "random channel";
-                        }
-
-                        get text() {
-                            return "random channel";
-                        }
-
-                        get hoverType() {
-                            return "icon";
-                        }
-
-                        get hoverValue() {
-                            return "times";
-                        }
-
-                        get hoverAction() {
-                            return () => {
-                            };
-                        }
-
-                        get hoverTitle() {
-                            return "button title attribute"
-                        }
-                    })()
                 ];
             }
         }
