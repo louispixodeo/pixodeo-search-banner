@@ -10,46 +10,4 @@ export default apiInitializer("1.14.0", (api) => {
     );
 
     api.forceDropdownForMenuPanels("search-menu-panel");
-
-    api.addSidebarSection((BaseCustomSidebarSection, BaseCustomSidebarSectionLink) => {
-        return class extends BaseCustomSidebarSection {
-            get name() {
-                return "wp_menu";
-            }
-
-            get title() {
-                return 'Main Navigation';
-            }
-
-            get text() {
-                return 'Main Navigation';
-            }
-
-            get displaySection() {
-                return true;
-            }
-
-            get links() {
-                return [
-                    new (class extends BaseCustomSidebarSectionLink {
-                        get name() {
-                            "nos-services"
-                        }
-
-                        get href() {
-                            return "https://www.partirseul.com/destination-voyage-seul/";
-                        }
-
-                        get title() {
-                            return "Nos Services - Pays";
-                        }
-
-                        get text() {
-                            return "Nos Services - Pays";
-                        }
-                    })(),
-                ];
-            }
-        }
-    })
 });
