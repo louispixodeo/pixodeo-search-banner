@@ -17,16 +17,12 @@ export default apiInitializer("1.14.0", (api) => {
                 return "wp-menu";
             }
 
-            get route() {
-                return "#";
-            }
-
             get title() {
                 return 'Main Navigation';
             }
 
             get text() {
-                return 'Main Navigation Text';
+                return 'Main Navigation';
             }
 
             get actionsIcon() {
@@ -40,7 +36,7 @@ export default apiInitializer("1.14.0", (api) => {
                             "nos-services"
                         }
 
-                        get route() {
+                        get href() {
                             return "https://www.partirseul.com/destination-voyage-seul/";
                         }
 
@@ -49,7 +45,7 @@ export default apiInitializer("1.14.0", (api) => {
                         }
 
                         get text() {
-                            return "Nos Services - Pays Text";
+                            return "Nos Services - Pays";
                         }
                     })(),
                 ];
