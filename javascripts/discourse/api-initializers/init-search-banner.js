@@ -14,7 +14,7 @@ export default apiInitializer("1.14.0", (api) => {
     api.addSidebarSection((BaseCustomSidebarSection, BaseCustomSidebarSectionLink) => {
         return class extends BaseCustomSidebarSection {
             get name() {
-                return "wp-menu";
+                return "wp_menu";
             }
 
             get title() {
@@ -25,8 +25,8 @@ export default apiInitializer("1.14.0", (api) => {
                 return 'Main Navigation';
             }
 
-            get actionsIcon() {
-                return "";
+            get displaySection() {
+                return true;
             }
 
             get links() {
