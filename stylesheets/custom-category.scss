@@ -207,12 +207,22 @@ body:not(.has-sidebar-page) #menu-main {
     }
 }
 
-.d-header .home-logo-wrapper-outlet {
-    min-width: 200px;
-}
-
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 481px) {
     .d-header #site-logo {
         height: 3.5rem;
+    }
+
+    .d-header .home-logo-wrapper-outlet {
+        min-width: 200px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .d-header-icons .icon {
+        width: 1.75em;
+        height: 1.75em;
+    }
+    .d-header-icons .d-icon {
+        font-size: 1.35em;
     }
 }
