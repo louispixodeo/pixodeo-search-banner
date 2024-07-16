@@ -225,4 +225,8 @@ body:not(.has-sidebar-page) #menu-main {
     .d-header-icons .d-icon {
         font-size: 1.35em;
     }
+
+    .d-header .home-logo-wrapper-outlet {
+        min-width: 140px;
+    }
 }
