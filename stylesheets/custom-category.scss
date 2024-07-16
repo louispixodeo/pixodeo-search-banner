@@ -183,10 +183,6 @@
     margin-right: 5px;
 }
 
-.d-header #site-logo {
-    height: 3.5rem;
-}
-
 .custom-search-banner .custom-search-banner-wrap {
     background: transparent;
 }
@@ -213,4 +209,10 @@ body:not(.has-sidebar-page) #menu-main {
 
 .d-header .home-logo-wrapper-outlet {
     min-width: 200px;
+}
+
+@media screen and (min-width: 400px) {
+    .d-header #site-logo {
+        height: 3.5rem;
+    }
 }
